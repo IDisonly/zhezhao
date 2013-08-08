@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <title>遮罩</title>
+                
+				<script src="http://hls-img.iweek.ly/ui/jquery-1.8.3.min.js"></script>
+                <script type="text/javascript">
+                        var img=new Image();
+                        function pageInit(){
+                                
+                                
+                                img.onload=function(){
+                                        
+                                        var ct=document.getElementById("mainCanvas").getContext("2d");
+                                        
+                                        ct.beginPath();
+                                        ct.rect(0,0,758,492);
+                                        ct.clip();
+										ct.drawImage(img,0,0);
+                                }
+                                img.src="images/d2.jpg";
+                               
+                                
+                        }
+                        
+						function change3(img_width){
+								
+                               var ct=document.getElementById("mainCanvas").getContext("2d");
+							   			document.getElementById("mainCanvas").width=758;
+										document.getElementById("mainCanvas").height=492;
+							   			ct.clearRect(0,0,758,492);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,492);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img,0,0);
+										document.getElementById("shang").style.left=img_width+"px";
+										document.getElementById("xia").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou").style.display="none";
+										
+										}
+
+								
+						}
+						
+						$(function(){
+	
+	var currentValue = $('#currentValue');
+	
+	$('#defaultSlider').change(function(){
+										change3(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	// Trigger the event on load, so
+	// the value field is populated:
+	
+	$('#defaultSlider').change();
+	
+});
+						
+						
+                </script>
+                <style>
+                
+                	input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 1px 0 0px #FFF,
+        0 1px 0 #FFF inset,
+        0px 2px 10px 0px black inset,
+        1px 0px 2px rgba(0, 0, 0, 0.4) inset,
+        0 0px 1px rgba(0, 0, 0, 0.6) inset;
+    background-color: #272728;
+    border-radius: 35px;
+    width: 758px;
+	opacity: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    height: 492px;
+    width: 60px;
+    background: none repeat scroll 0 0 #FFF;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 -1px 1px black inset;
+	opacity: 0;
+}
+                </style>
+        </head>
+        <body onload="pageInit();" style="margin:0px;width:768px; height:522px;">
+ 				
+                <div style="width:758px; height:492px; position:absolute; float:left;top:8px;left:5px;"><img src="images/d1.jpg" width="758" height="492"></div>
+                <canvas width="758" height="492" id="mainCanvas" style="position:absolute; width:758px; height:492px;top:8px;left:5px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:0px;">
+                 <img src="images/jiantouhei.png"  width="185" height="37" style="position:absolute; left:5px;top:408px;" id="jiantou">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:501px;" id="shang">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia">
+                 <input id="defaultSlider" type="range" min="0" max="758" style="width:758px;"  value="1">
+                    
+                 </div>
+        </body>
+        
+      
+</html>
