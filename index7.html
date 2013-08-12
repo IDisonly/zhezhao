@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <title>遮罩</title>
+                
+				<script src="http://hls-img.iweek.ly/ui/jquery-1.8.3.min.js"></script>
+                <script type="text/javascript">
+                        var img=new Image();
+						var img2=new Image();
+						var img3=new Image();
+						var img4=new Image();
+						var img5=new Image();
+						var img6=new Image();
+						var img7=new Image();
+						var img8=new Image();
+						
+                        function pageInit(){
+                                
+                                
+                                img.onload=function(){
+                                        
+                                        var ct=document.getElementById("mainCanvas").getContext("2d");
+                                        
+                                        ct.beginPath();
+                                        ct.rect(0,0,252,308);
+                                        ct.clip();
+										ct.drawImage(img,0,0);
+
+										
+										
+										var ct2=document.getElementById("mainCanvas2").getContext("2d");
+                                        
+                                        ct2.beginPath();
+                                        ct2.rect(0,0,225,546);
+                                        ct2.clip();
+										ct2.drawImage(img2,0,0);
+
+										
+										var ct3=document.getElementById("mainCanvas3").getContext("2d");
+                                        
+                                        ct3.beginPath();
+                                        ct3.rect(0,0,547,228);
+                                        ct3.clip();
+										ct3.drawImage(img3,0,0);
+										
+										var ct4=document.getElementById("mainCanvas4").getContext("2d");
+                                        
+                                        ct4.beginPath();
+                                        ct4.rect(0,0,252,238);
+                                        ct4.clip();
+										ct4.drawImage(img4,0,0);
+										
+										var ct5=document.getElementById("mainCanvas5").getContext("2d");
+                                        
+                                        ct5.beginPath();
+                                        ct5.rect(0,0,477,202);
+                                        ct5.clip();
+										ct5.drawImage(img5,0,0);
+										
+										var ct6=document.getElementById("mainCanvas6").getContext("2d");
+                                        
+                                        ct6.beginPath();
+                                        ct6.rect(0,0,242,520);
+                                        ct6.clip();
+										ct6.drawImage(img6,0,0);
+										
+										var ct7=document.getElementById("mainCanvas7").getContext("2d");
+                                        
+                                        ct7.beginPath();
+                                        ct7.rect(0,0,421,131);
+                                        ct7.clip();
+										ct7.drawImage(img7,0,0);
+									
+									
+										var ct8=document.getElementById("mainCanvas8").getContext("2d");
+                                        
+                                        ct8.beginPath();
+                                        ct8.rect(0,0,421,389);
+                                        ct8.clip();
+										ct8.drawImage(img8,0,0);
+										
+										
+                                }
+                                img.src="images/02.jpg";
+								img2.src="images/04.jpg";
+								img3.src="images/06.jpg";
+								img4.src="images/08.jpg";
+								img5.src="images/10.jpg";
+								img6.src="images/12.jpg";
+								img7.src="images/14.jpg";
+								img8.src="images/16.jpg";
+                               
+                                
+                        }
+                        
+						function change(img_width){
+								
+                               var ct=document.getElementById("mainCanvas").getContext("2d");
+							   			document.getElementById("mainCanvas").width=252;
+										document.getElementById("mainCanvas").height=308;
+							   			ct.clearRect(0,0,252,308);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,308);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img,0,0);
+										document.getElementById("shang").style.left=img_width+"px";
+										document.getElementById("xia").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou").style.display="none";
+										
+										}
+
+								
+						}
+						function change2(img_width){
+								
+                               var ct=document.getElementById("mainCanvas2").getContext("2d");
+							   			document.getElementById("mainCanvas2").width=225;
+										document.getElementById("mainCanvas2").height=546;
+							   			ct.clearRect(0,0,225,546);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,546);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img2,0,0);
+										document.getElementById("shang2").style.left=img_width+"px";
+										document.getElementById("xia2").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou2").style.display="none";
+										
+										}
+
+								
+						}
+						
+						function change3(img_width){
+								
+                               var ct=document.getElementById("mainCanvas3").getContext("2d");
+							   			document.getElementById("mainCanvas3").width=547;
+										document.getElementById("mainCanvas3").height=228;
+							   			ct.clearRect(0,0,547,228);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,228);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img3,0,0);
+										document.getElementById("shang3").style.left=img_width+"px";
+										document.getElementById("xia3").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou3").style.display="none";
+										
+										}
+
+								
+						}
+						function change4(img_width){
+								
+                               var ct=document.getElementById("mainCanvas4").getContext("2d");
+							   			document.getElementById("mainCanvas4").width=252;
+										document.getElementById("mainCanvas4").height=238;
+							   			ct.clearRect(0,0,252,238);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,238);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img4,0,0);
+										document.getElementById("shang4").style.left=img_width+"px";
+										document.getElementById("xia4").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou4").style.display="none";
+										
+										}
+
+								
+						}
+						
+						function change5(img_width){
+								
+                               var ct=document.getElementById("mainCanvas5").getContext("2d");
+							   			document.getElementById("mainCanvas5").width=477;
+										document.getElementById("mainCanvas5").height=202;
+							   			ct.clearRect(0,0,477,202);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,202);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img5,0,0);
+										document.getElementById("shang5").style.left=img_width+"px";
+										document.getElementById("xia5").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou5").style.display="none";
+										
+										}
+
+								
+						}
+						function change6(img_width){
+								
+                               var ct=document.getElementById("mainCanvas6").getContext("2d");
+							   			document.getElementById("mainCanvas6").width=242;
+										document.getElementById("mainCanvas6").height=520;
+							   			ct.clearRect(0,0,424,520);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,520);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img6,0,0);
+										document.getElementById("shang6").style.left=img_width+"px";
+										document.getElementById("xia6").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou6").style.display="none";
+										
+										}
+
+								
+						}
+						
+						function change7(img_width){
+								
+                               var ct=document.getElementById("mainCanvas7").getContext("2d");
+							   			document.getElementById("mainCanvas7").width=305;
+										document.getElementById("mainCanvas7").height=220;
+							   			ct.clearRect(0,0,305,220);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,220);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img7,0,0);
+										document.getElementById("shang7").style.left=img_width+"px";
+										document.getElementById("xia7").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou7").style.display="none";
+										
+										}
+
+								
+						}
+						
+						function change8(img_width){
+								
+                               var ct=document.getElementById("mainCanvas8").getContext("2d");
+							   			document.getElementById("mainCanvas8").width=305;
+										document.getElementById("mainCanvas8").height=300;
+							   			ct.clearRect(0,0,305,399);
+                                        //ct.globalCompositeOperation="source-over";
+										//ct.fillRect(0,0,436,269);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.beginPath();
+                                        ct.rect(0,0,img_width,300);
+										//ct.globalCompositeOperation="destination-out";
+                                        ct.clip();
+										ct.drawImage(img8,0,0);
+										document.getElementById("shang8").style.left=img_width+"px";
+										document.getElementById("xia8").style.left=img_width+"px";
+										if(img_width >= 3)
+										{
+											document.getElementById("jiantou8").style.display="none";
+										
+										}
+
+								
+						}
+
+
+
+
+
+	$(function(){
+	
+	var currentValue = $('#currentValue');
+	
+	$('#defaultSlider').change(function(){
+		
+		change(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	$('#defaultSlider2').change(function(){
+		
+		change2(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	$('#defaultSlider3').change(function(){
+		
+		change3(this.value);
+	    currentValue.html(this.value);
+	});
+	$('#defaultSlider4').change(function(){
+		
+		change4(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	$('#defaultSlider5').change(function(){
+		
+		change5(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	$('#defaultSlider6').change(function(){
+		
+		change6(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	$('#defaultSlider7').change(function(){
+		
+		change7(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	$('#defaultSlider8').change(function(){
+		
+		change8(this.value);
+	    currentValue.html(this.value);
+	});
+	
+	// Trigger the event on load, so
+	// the value field is populated:
+	
+	$('#defaultSlider').change();
+	$('#defaultSlider2').change();
+	$('#defaultSlider3').change();
+	$('#defaultSlider4').change();
+	$('#defaultSlider5').change();
+	$('#defaultSlider6').change();
+	$('#defaultSlider7').change();
+	$('#defaultSlider8').change();
+	
+});
+						
+						
+                </script>
+                <style>
+                
+input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 1px 0 0px #FFF,
+        0 1px 0 #FFF inset,
+        0px 2px 10px 0px black inset,
+        1px 0px 2px rgba(0, 0, 0, 0.4) inset,
+        0 0px 1px rgba(0, 0, 0, 0.6) inset;
+    background-color: #272728;
+    border-radius: 35px;
+    width: 300px;
+	opacity: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    height: 300px;
+    width: 60px;
+    background: none repeat scroll 0 0 #FFF;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 -1px 1px black inset;
+	opacity: 0;
+}
+                </style>
+        </head>
+        <body onload="pageInit();" style="margin:0px;width:1024px; height:748px;">
+ 				
+                <div style="width:252px; height:308px; position:absolute; float:left;top:0px;left:0px;"><img src="images/01.jpg" width="252" height="308"></div>
+                <canvas width="252" height="308" id="mainCanvas" style="position:absolute; width:252px; height:308px;top:0px;left:0px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:0px;">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:0px;top:220px;" id="jiantou">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:300px;" id="shang">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia">
+                 <input id="defaultSlider" type="range" min="0" max="252" style="width:252px;"  value="0">
+                 </div>
+                 
+                 
+                <div style="width:225px; height:546px; position:absolute; float:left;top:0px;left:252px;"><img src="images/03.jpg" width="225" height="546"></div>
+                <canvas width="225" height="546" id="mainCanvas2" style="position:absolute; width:225px; height:546px;top:0px;left:252px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:0px; left:252px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:430px;" id="jiantou2">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:537px;" id="shang2">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia2">
+                 <input id="defaultSlider2" type="range" min="0" max="225" style="width:225px; height:540px;"  value="0">
+                    
+                 </div>
+                 
+                 
+                 <div style="width:547px; height:228px; position:absolute; float:left;top:0px;left:477px;"><img src="images/05.jpg" width="547" height="228"></div>
+                <canvas width="547" height="228" id="mainCanvas3" style="position:absolute; width:547px; height:228px;top:0px;left:477px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:0px; left:477px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:140px;" id="jiantou3">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:218px;" id="shang3">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia3">
+                 <input id="defaultSlider3" type="range" min="0" max="545" style="width:545px; height:228px;"  value="0">
+                    
+                 </div>
+                 
+                 <div style="width:252px; height:238px; position:absolute; float:left;top:308px;left:0px;"><img src="images/07.jpg" width="252" height="238"></div>
+                <canvas width="252" height="238" id="mainCanvas4" style="position:absolute; width:252px; height:238px;top:308px;left:0px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:308px; left:0px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:160px;" id="jiantou4">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:229px;" id="shang4">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia4">
+                 <input id="defaultSlider4" type="range" min="0" max="250" style="width:250px; height:236px;"  value="0">
+                    
+                 </div>
+                 
+                 
+                <div style="width:477px; height:202px; position:absolute; float:left;top:546px;left:0px;"><img src="images/09.jpg" width="477" height="202"></div>
+                <canvas width="477" height="202" id="mainCanvas5" style="position:absolute; width:477px; height:202px;top:546px;left:0px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:546px; left:0px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:125px;" id="jiantou5">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:192px;" id="shang5">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia5">
+                 <input id="defaultSlider5" type="range" min="0" max="477" style="width:477px; height:202px;"  value="0">
+                    
+                 </div>
+                 
+               <div style="width:242px; height:520px; position:absolute; float:left;top:228px;left:477px;"><img src="images/11.jpg" width="242" height="520"></div>
+                <canvas width="242" height="520" id="mainCanvas6" style="position:absolute; width:242px; height:520px;top:228px;left:477px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:228px; left:477px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:400px;" id="jiantou6">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:510px;" id="shang6">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia6">
+                 <input id="defaultSlider6" type="range" min="0" max="242" style="width:242px; height:520px;"  value="0">
+                    
+                 </div>
+                 
+                 <div style="width:305px; height:220px; position:absolute; float:left;top:228px;left:719px;"><img src="images/13.jpg" width="305" height="220"></div>
+                <canvas width="305" height="220" id="mainCanvas7" style="position:absolute; width:305px; height:220px;top:228px;left:719px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:228px; left:719px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:130px;" id="jiantou7">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:211px;" id="shang7">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia7">
+                 <input id="defaultSlider7" type="range" min="0" max="305" style="width:305px; height:220px;"  value="0">
+                    
+                 </div>
+                 
+                 
+                 <div style="width:305px; height:300px; position:absolute; float:left;top:448px;left:719px;"><img src="images/15.jpg" width="305" height="300"></div>
+                <canvas width="305" height="300" id="mainCanvas8" style="position:absolute; width:305px; height:300px;top:448px;left:719px;"></canvas>
+                
+                 
+                 <div style=" position:absolute;top:448px; left:719px">
+                 <img src="images/tag.png"  width="185" height="37" style="position:absolute; left:5px;top:200px;" id="jiantou8">
+                 <img src="images/shang.png"  width="9" height="8" style="position:absolute; left:0; top:291px;" id="shang8">
+                 <img src="images/xia.png"  width="9" height="8" style="position:absolute; left:0;top:0px" id="xia8">
+                 <input id="defaultSlider8" type="range" min="0" max="305" style="width:305px; height:300px;"  value="0">
+                    
+                 </div>
+
+        </body>
+        
+      
+</html>
